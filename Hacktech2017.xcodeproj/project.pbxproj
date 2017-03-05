@@ -15,6 +15,15 @@
 		33AF40441E6B55BA005FB877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF40421E6B55BA005FB877 /* LaunchScreen.storyboard */; };
 		33AF404F1E6B55BA005FB877 /* Hacktech2017Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF404E1E6B55BA005FB877 /* Hacktech2017Tests.swift */; };
 		33AF405A1E6B55BA005FB877 /* Hacktech2017UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF40591E6B55BA005FB877 /* Hacktech2017UITests.swift */; };
+		33AF40751E6B7C13005FB877 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF40671E6B7C13005FB877 /* StringExtension.swift */; };
+		33AF40761E6B7C13005FB877 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406A1E6B7C13005FB877 /* AnalyzeImage.swift */; };
+		33AF40771E6B7C13005FB877 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406B1E6B7C13005FB877 /* GetThumbnail.swift */; };
+		33AF40781E6B7C13005FB877 /* ListDomainSpecificModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406C1E6B7C13005FB877 /* ListDomainSpecificModels.swift */; };
+		33AF40791E6B7C13005FB877 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406D1E6B7C13005FB877 /* OCR.swift */; };
+		33AF407A1E6B7C13005FB877 /* RecognizeDomainSpecificContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406E1E6B7C13005FB877 /* RecognizeDomainSpecificContent.swift */; };
+		33AF407B1E6B7C13005FB877 /* TagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406F1E6B7C13005FB877 /* TagImage.swift */; };
+		33AF407C1E6B7C13005FB877 /* JSONNSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF40711E6B7C13005FB877 /* JSONNSDataExtension.swift */; };
+		33AF407D1E6B7C13005FB877 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF40721E6B7C13005FB877 /* CognitiveServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		33AF40551E6B55BA005FB877 /* Hacktech2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hacktech2017UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF40591E6B55BA005FB877 /* Hacktech2017UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacktech2017UITests.swift; sourceTree = "<group>"; };
 		33AF405B1E6B55BA005FB877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AF40671E6B7C13005FB877 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		33AF406A1E6B7C13005FB877 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
+		33AF406B1E6B7C13005FB877 /* GetThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetThumbnail.swift; sourceTree = "<group>"; };
+		33AF406C1E6B7C13005FB877 /* ListDomainSpecificModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDomainSpecificModels.swift; sourceTree = "<group>"; };
+		33AF406D1E6B7C13005FB877 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
+		33AF406E1E6B7C13005FB877 /* RecognizeDomainSpecificContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizeDomainSpecificContent.swift; sourceTree = "<group>"; };
+		33AF406F1E6B7C13005FB877 /* TagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagImage.swift; sourceTree = "<group>"; };
+		33AF40711E6B7C13005FB877 /* JSONNSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNSDataExtension.swift; sourceTree = "<group>"; };
+		33AF40721E6B7C13005FB877 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,7 @@
 		33AF40351E6B55BA005FB877 /* Hacktech2017 */ = {
 			isa = PBXGroup;
 			children = (
+				33AF40741E6B7C13005FB877 /* SDK */,
 				33AF40361E6B55BA005FB877 /* AppDelegate.swift */,
 				33AF40381E6B55BA005FB877 /* ViewController.swift */,
 				33AF403A1E6B55BA005FB877 /* Main.storyboard */,
@@ -127,6 +146,55 @@
 			);
 			path = Hacktech2017UITests;
 			sourceTree = "<group>";
+		};
+		33AF40681E6B7C13005FB877 /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33AF40671E6B7C13005FB877 /* StringExtension.swift */,
+			);
+			path = "Swift Extensions";
+			sourceTree = "<group>";
+		};
+		33AF40691E6B7C13005FB877 /* Emotion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Emotion;
+			sourceTree = "<group>";
+		};
+		33AF40701E6B7C13005FB877 /* ComputerVision */ = {
+			isa = PBXGroup;
+			children = (
+				33AF406A1E6B7C13005FB877 /* AnalyzeImage.swift */,
+				33AF406B1E6B7C13005FB877 /* GetThumbnail.swift */,
+				33AF406C1E6B7C13005FB877 /* ListDomainSpecificModels.swift */,
+				33AF406D1E6B7C13005FB877 /* OCR.swift */,
+				33AF406E1E6B7C13005FB877 /* RecognizeDomainSpecificContent.swift */,
+				33AF406F1E6B7C13005FB877 /* TagImage.swift */,
+			);
+			path = ComputerVision;
+			sourceTree = "<group>";
+		};
+		33AF40731E6B7C13005FB877 /* CognitiveServices */ = {
+			isa = PBXGroup;
+			children = (
+				33AF40691E6B7C13005FB877 /* Emotion */,
+				33AF40701E6B7C13005FB877 /* ComputerVision */,
+				33AF40711E6B7C13005FB877 /* JSONNSDataExtension.swift */,
+				33AF40721E6B7C13005FB877 /* CognitiveServices.swift */,
+			);
+			path = CognitiveServices;
+			sourceTree = "<group>";
+		};
+		33AF40741E6B7C13005FB877 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				33AF40681E6B7C13005FB877 /* Swift Extensions */,
+				33AF40731E6B7C13005FB877 /* CognitiveServices */,
+			);
+			name = SDK;
+			path = "/Users/ziyanmo/Downloads/Microsoft-Cognitive-Services-Swift-SDK-master/Sample Project/CognitiveServices/CognitiveServices/../../../SDK";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -196,6 +264,7 @@
 				TargetAttributes = {
 					33AF40321E6B55BA005FB877 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GSSWM9KJ3T;
 						ProvisioningStyle = Automatic;
 					};
 					33AF40491E6B55BA005FB877 = {
@@ -262,9 +331,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33AF40791E6B7C13005FB877 /* OCR.swift in Sources */,
+				33AF40751E6B7C13005FB877 /* StringExtension.swift in Sources */,
+				33AF407B1E6B7C13005FB877 /* TagImage.swift in Sources */,
 				33AF40391E6B55BA005FB877 /* ViewController.swift in Sources */,
+				33AF407C1E6B7C13005FB877 /* JSONNSDataExtension.swift in Sources */,
 				33AF403F1E6B55BA005FB877 /* Hacktech2017.xcdatamodeld in Sources */,
+				33AF407D1E6B7C13005FB877 /* CognitiveServices.swift in Sources */,
+				33AF40771E6B7C13005FB877 /* GetThumbnail.swift in Sources */,
 				33AF40371E6B55BA005FB877 /* AppDelegate.swift in Sources */,
+				33AF40761E6B7C13005FB877 /* AnalyzeImage.swift in Sources */,
+				33AF407A1E6B7C13005FB877 /* RecognizeDomainSpecificContent.swift in Sources */,
+				33AF40781E6B7C13005FB877 /* ListDomainSpecificModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +494,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GSSWM9KJ3T;
 				INFOPLIST_FILE = Hacktech2017/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = temp.Hacktech2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,7 +508,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GSSWM9KJ3T;
 				INFOPLIST_FILE = Hacktech2017/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = temp.Hacktech2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +591,7 @@
 				33AF40601E6B55BA005FB877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33AF40611E6B55BA005FB877 /* Build configuration list for PBXNativeTarget "Hacktech2017Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +600,7 @@
 				33AF40631E6B55BA005FB877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33AF40641E6B55BA005FB877 /* Build configuration list for PBXNativeTarget "Hacktech2017UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +609,7 @@
 				33AF40661E6B55BA005FB877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

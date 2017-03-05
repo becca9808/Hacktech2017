@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allows you to pick photos to turn into notes</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allows you to take photos to turn into notes</string>
 </dict>
 </plist>
