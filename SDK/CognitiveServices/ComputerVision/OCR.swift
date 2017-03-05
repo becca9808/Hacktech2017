@@ -127,10 +127,12 @@ class OCR: NSObject {
      - Parameter dictionary: The Dictionary created by `recognizeCharactersOnImageUrl()`.
      - Returns: An String Array extracted from the Dictionary.
      */
-    func extractStringsFromDictionary(_ dictionary: [String : AnyObject]) -> [String] {
-        
+    
+    /*
+    func extractStringsFromDictionary(_ dictionary: [String : AnyObject]) {
+        //originally returned
         // Get Regions from the dictionary
-        let regions = (dictionary["regions"] as! NSArray).firstObject as? [String:AnyObject]
+       let regions = (dictionary["regions"] as! NSArray).firstObject as? [String:AnyObject]
         
         // Get lines from the regions dictionary
         let lines = regions!["lines"] as! NSArray
@@ -141,10 +143,16 @@ class OCR: NSObject {
         // Get words from lines
         let inLine = lines.enumerated().map {($0.element as? NSDictionary)?["words"] as! [[String : AnyObject]] }
         
-        // Get text from words
-        let extractedText = inLine.enumerated().map { $0.element[0]["text"] as! String}
+        // Iterating through the columns
+        var extractedText:[String]
+        var number = (int) $0.element.count
+        for index in 1...5 {
+          extractedText.append($0.element[index]["text"] as! String)
+            //inLine.enumerated().map { $0.element[index]["text"] as! String}
+            
 
-        return extractedText
+        }
+        //return extractedText
     }
     
     /**
@@ -162,5 +170,6 @@ class OCR: NSObject {
         )
         return reducedArray
     }
+ */
     
 }

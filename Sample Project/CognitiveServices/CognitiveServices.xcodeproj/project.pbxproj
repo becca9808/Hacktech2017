@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		645100F51CE6362F00C26C1E /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645100F41CE6362F00C26C1E /* OCRViewController.swift */; };
 		64A8340D1CBEB6200077AF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A8340C1CBEB6200077AF3E /* AppDelegate.swift */; };
 		64A8340F1CBEB6200077AF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A8340E1CBEB6200077AF3E /* ViewController.swift */; };
-		64A834121CBEB6200077AF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A834101CBEB6200077AF3E /* Main.storyboard */; };
+		64A834121CBEB6200077AF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A834101CBEB6200077AF3E /* Main.storyboard */; settings = {ASSET_TAGS = (TakePicture, ); }; };
 		64A834141CBEB6200077AF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A834131CBEB6200077AF3E /* Assets.xcassets */; };
 		64A834171CBEB6200077AF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A834151CBEB6200077AF3E /* LaunchScreen.storyboard */; };
 		64A834221CBEB6200077AF3E /* CognitiveServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A834211CBEB6200077AF3E /* CognitiveServicesTests.swift */; };
@@ -277,6 +277,9 @@
 		64A834011CBEB6200077AF3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					TakePicture,
+				);
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Vladimir Danila";
@@ -299,7 +302,7 @@
 				};
 			};
 			buildConfigurationList = 64A834041CBEB6200077AF3E /* Build configuration list for PBXProject "CognitiveServices" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -454,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -494,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -510,7 +513,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GSSWM9KJ3T;
 				INFOPLIST_FILE = CognitiveServices/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vladidanila.hacktech.CognitiveServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,7 +530,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GSSWM9KJ3T;
 				INFOPLIST_FILE = CognitiveServices/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vladidanila.hacktech.CognitiveServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
