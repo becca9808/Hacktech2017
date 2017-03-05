@@ -45,5 +45,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>USE THE PHOTO</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Taking a picture using camer</string>
 </dict>
 </plist>

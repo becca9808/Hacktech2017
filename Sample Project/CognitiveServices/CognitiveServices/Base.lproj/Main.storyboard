@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P9W-hQ-VX0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P9W-hQ-VX0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,7 +63,6 @@
                     <connections>
                         <outlet property="tableView" destination="Ich-he-w88" id="KZI-bb-8fH"/>
                         <segue destination="G63-Mn-ItJ" kind="show" identifier="OCR" id="7Em-VF-sbx"/>
-                        <segue destination="Fkw-Ii-ZTz" kind="show" identifier="Analyze Image" id="jKd-3S-mXl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,18 +109,18 @@
                                     <action selector="textFromUrlDidPush:" destination="G63-Mn-ItJ" eventType="touchUpInside" id="JpJ-Mn-5P0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-9r-YHn">
-                                <rect key="frame" x="16" y="350" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take Picture"/>
-                                <connections>
-                                    <action selector="textFromImageDidPush:" destination="G63-Mn-ItJ" eventType="touchUpInside" id="on9-ba-43T"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AqJ-5u-Qsa">
                                 <rect key="frame" x="16" y="388" width="343" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhN-rm-Pj7">
+                                <rect key="frame" x="16" y="350" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a picture"/>
+                                <connections>
+                                    <action selector="textFromCameraRoll:" destination="G63-Mn-ItJ" eventType="touchUpInside" id="olc-jT-RYF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -147,81 +146,6 @@
             </objects>
             <point key="canvasLocation" x="1799.2" y="-573.46326836581716"/>
         </scene>
-        <!--Analyze Image View Controller-->
-        <scene sceneID="l84-0h-Y5f">
-            <objects>
-                <viewController id="Fkw-Ii-ZTz" customClass="AnalyzeImageViewController" customModule="CognitiveServices" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mPg-t2-VLc"/>
-                        <viewControllerLayoutGuide type="bottom" id="TBH-qS-qOf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iVd-Ri-g55">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trd-cc-Zjj">
-                                <rect key="frame" x="16" y="416" width="157" height="30"/>
-                                <state key="normal" title="Analyze image from url"/>
-                                <connections>
-                                    <action selector="analyzeFromURLDidPush:" destination="Fkw-Ii-ZTz" eventType="touchUpInside" id="EqI-WP-upZ"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNe-X5-b2N">
-                                <rect key="frame" x="16" y="64" width="343" height="300"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="nRp-4U-iKy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-Ba-7b7">
-                                <rect key="frame" x="16" y="378" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Fkw-Ii-ZTz" id="JFM-ga-wSn"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4N-TT-Tcf">
-                                <rect key="frame" x="16" y="454" width="136" height="30"/>
-                                <state key="normal" title="Analyze local image"/>
-                                <connections>
-                                    <action selector="analyzeImageDidPush:" destination="Fkw-Ii-ZTz" eventType="touchUpInside" id="Z4b-7y-pn4"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="analyzeImageDemo" translatesAutoresizingMaskIntoConstraints="NO" id="BxE-NJ-3jU">
-                                <rect key="frame" x="16" y="492" width="343" height="175"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="BxE-NJ-3jU" secondAttribute="trailing" id="5as-sY-m5K"/>
-                            <constraint firstItem="jNe-X5-b2N" firstAttribute="leading" secondItem="iVd-Ri-g55" secondAttribute="leadingMargin" id="Eeo-DH-LPD"/>
-                            <constraint firstItem="LHK-Ba-7b7" firstAttribute="trailing" secondItem="iVd-Ri-g55" secondAttribute="trailingMargin" id="Nac-di-fm2"/>
-                            <constraint firstItem="Trd-cc-Zjj" firstAttribute="leading" secondItem="iVd-Ri-g55" secondAttribute="leadingMargin" id="Nli-rw-hbG"/>
-                            <constraint firstItem="jNe-X5-b2N" firstAttribute="trailing" secondItem="iVd-Ri-g55" secondAttribute="trailingMargin" id="OJt-Kf-ZGm"/>
-                            <constraint firstItem="Trd-cc-Zjj" firstAttribute="top" secondItem="LHK-Ba-7b7" secondAttribute="bottom" constant="8" id="ORO-xi-1gX"/>
-                            <constraint firstItem="R4N-TT-Tcf" firstAttribute="leading" secondItem="iVd-Ri-g55" secondAttribute="leadingMargin" id="Ra9-Wv-FT5"/>
-                            <constraint firstItem="LHK-Ba-7b7" firstAttribute="leading" secondItem="iVd-Ri-g55" secondAttribute="leadingMargin" id="Xtv-QP-2fQ"/>
-                            <constraint firstItem="jNe-X5-b2N" firstAttribute="top" secondItem="mPg-t2-VLc" secondAttribute="bottom" id="cAE-RH-CvI"/>
-                            <constraint firstItem="BxE-NJ-3jU" firstAttribute="top" secondItem="R4N-TT-Tcf" secondAttribute="bottom" constant="8" id="ghS-0m-I2Z"/>
-                            <constraint firstItem="BxE-NJ-3jU" firstAttribute="leading" secondItem="iVd-Ri-g55" secondAttribute="leadingMargin" id="mBR-Bn-dI3"/>
-                            <constraint firstItem="R4N-TT-Tcf" firstAttribute="top" secondItem="Trd-cc-Zjj" secondAttribute="bottom" constant="8" id="nvA-z3-kVA"/>
-                            <constraint firstItem="LHK-Ba-7b7" firstAttribute="top" secondItem="jNe-X5-b2N" secondAttribute="bottom" constant="14" id="o8d-dr-kxQ"/>
-                            <constraint firstItem="TBH-qS-qOf" firstAttribute="top" secondItem="BxE-NJ-3jU" secondAttribute="bottom" id="wcw-aw-YpN"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="BxE-NJ-3jU" id="59u-RO-QLV"/>
-                        <outlet property="textView" destination="jNe-X5-b2N" id="zON-Em-1s0"/>
-                        <outlet property="urlTextField" destination="LHK-Ba-7b7" id="uRN-t0-fkA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfp-MU-X30" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1800" y="89"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FbF-rf-0e9">
             <objects>
@@ -241,7 +165,4 @@
             <point key="canvasLocation" x="235" y="335"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="analyzeImageDemo" width="800" height="533"/>
-    </resources>
 </document>
