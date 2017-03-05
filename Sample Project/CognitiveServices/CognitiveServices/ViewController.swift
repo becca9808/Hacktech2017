@@ -37,15 +37,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         switch identifier {
             
-        case "Powered by Microsoft Cognitive Services":
-            let url = URL(string: "https://microsoft.com/cognitive-services/")!
-            if #available(iOS 9.0, *) {
-                let sfViewController = SFSafariViewController(url: url)
-                self.present(sfViewController, animated: true, completion: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-            
             
         case "Analyze Image", "OCR":
             self.performSegue(withIdentifier: identifier, sender: self)
@@ -85,7 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - UITableViewDataSource Delegate
     
     
-    let demos = ["Analyze Image","Get Thumbnail","List Domain Specific Model","OCR","Recognize Domain Specfic Content","Tag Image", "Powered by Microsoft Cognitive Services"]
+    let demos = ["OCR"]
     
     
     func numberOfSections(in tableView: UITableView) -> Int {

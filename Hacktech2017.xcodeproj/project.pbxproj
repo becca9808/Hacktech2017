@@ -24,6 +24,7 @@
 		33AF407B1E6B7C13005FB877 /* TagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF406F1E6B7C13005FB877 /* TagImage.swift */; };
 		33AF407C1E6B7C13005FB877 /* JSONNSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF40711E6B7C13005FB877 /* JSONNSDataExtension.swift */; };
 		33AF407D1E6B7C13005FB877 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF40721E6B7C13005FB877 /* CognitiveServices.swift */; };
+		33AF407F1E6BB8D5005FB877 /* textAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF407E1E6BB8D5005FB877 /* textAnalytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		33AF406F1E6B7C13005FB877 /* TagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagImage.swift; sourceTree = "<group>"; };
 		33AF40711E6B7C13005FB877 /* JSONNSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNSDataExtension.swift; sourceTree = "<group>"; };
 		33AF40721E6B7C13005FB877 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
+		33AF407E1E6BB8D5005FB877 /* textAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textAnalytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				33AF40741E6B7C13005FB877 /* SDK */,
 				33AF40361E6B55BA005FB877 /* AppDelegate.swift */,
+				33AF407E1E6BB8D5005FB877 /* textAnalytics.swift */,
 				33AF40381E6B55BA005FB877 /* ViewController.swift */,
 				33AF403A1E6B55BA005FB877 /* Main.storyboard */,
 				33AF40401E6B55BA005FB877 /* Assets.xcassets */,
@@ -337,6 +340,7 @@
 				33AF40391E6B55BA005FB877 /* ViewController.swift in Sources */,
 				33AF407C1E6B7C13005FB877 /* JSONNSDataExtension.swift in Sources */,
 				33AF403F1E6B55BA005FB877 /* Hacktech2017.xcdatamodeld in Sources */,
+				33AF407F1E6BB8D5005FB877 /* textAnalytics.swift in Sources */,
 				33AF407D1E6B7C13005FB877 /* CognitiveServices.swift in Sources */,
 				33AF40771E6B7C13005FB877 /* GetThumbnail.swift in Sources */,
 				33AF40371E6B55BA005FB877 /* AppDelegate.swift in Sources */,

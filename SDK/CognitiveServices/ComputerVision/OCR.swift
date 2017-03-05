@@ -128,48 +128,46 @@ class OCR: NSObject {
      - Returns: An String Array extracted from the Dictionary.
      */
     
-    /*
-    func extractStringsFromDictionary(_ dictionary: [String : AnyObject]) {
-        //originally returned
-        // Get Regions from the dictionary
-       let regions = (dictionary["regions"] as! NSArray).firstObject as? [String:AnyObject]
+    func extractStringsFromDictionary(_ dictionary: [String : AnyObject]) -> [String]
+    {
+        var text:[String] = []
         
-        // Get lines from the regions dictionary
-        let lines = regions!["lines"] as! NSArray
-
-
-        // TODO: Check if this works
-
-        // Get words from lines
-        let inLine = lines.enumerated().map {($0.element as? NSDictionary)?["words"] as! [[String : AnyObject]] }
-        
-        // Iterating through the columns
-        var extractedText:[String]
-        var number = (int) $0.element.count
-        for index in 1...5 {
-          extractedText.append($0.element[index]["text"] as! String)
-            //inLine.enumerated().map { $0.element[index]["text"] as! String}
-            
-
+        // get regions from dictionary
+        if let regions = dictionary["regions"] as? [[String:AnyObject]]
+        {
+            for region in regions
+            {
+                if let lines = region["lines"] as? [[String:AnyObject]]
+                {
+                    for line in lines
+                    {
+                        var currentLine:String = ""
+                        if let words = line["words"] as? [[String:AnyObject]]
+                        {
+                            for word in words
+                            {
+                                currentLine += word["text"] as! String
+                                currentLine += " "
+                            }
+                        }
+                        text.append(currentLine)
+                    }
+                }
+            }
         }
-        //return extractedText
+        return text
     }
     
-    /**
-     Returns a String extracted from the Dictionary generated from `recognizeCharactersOnImageUrl()`
-     - Parameter dictionary: The Dictionary created by `recognizeCharactersOnImageUrl()`.
-     - Returns: A String extracted from the Dictionary.
-     */
-    func extractStringFromDictionary(_ dictionary: [String:AnyObject]) -> String {
-        
+    // return one large string composed of the previous array of lines
+    func extractStringFromDictionary(_ dictionary: [String:AnyObject]) -> String
+    {
         let stringArray = extractStringsFromDictionary(dictionary)
         
         let reducedArray = stringArray.enumerated().reduce("", {
-                $0 + $1.element + ($1.offset < stringArray.endIndex-1 ? " " : "")
-            }
+            $0 + $1.element + ($1.offset < stringArray.endIndex-1 ? " " : "")
+        }
         )
         return reducedArray
     }
- */
     
 }
