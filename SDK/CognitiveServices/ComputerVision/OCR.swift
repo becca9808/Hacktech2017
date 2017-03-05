@@ -128,10 +128,18 @@ class OCR: NSObject {
      - Returns: An String Array extracted from the Dictionary.
      */
     
-    /*
     func extractStringsFromDictionary(_ dictionary: [String : AnyObject]) {
         //originally returned
         // Get Regions from the dictionary
+        
+        let regions = (dictionary["regions"] as! NSArray).firstObject as? [String:AnyObject]
+        
+        let lines = regions!["lines"] as! NSArray
+        
+        let inLine = lines.enumerated().map{($0.element as? NSDictionary)?["words"] as! [[String : AnyObject]] }
+        
+        
+        /*
        let regions = (dictionary["regions"] as! NSArray).firstObject as? [String:AnyObject]
         
         // Get lines from the regions dictionary
@@ -153,6 +161,7 @@ class OCR: NSObject {
 
         }
         //return extractedText
+         */
     }
     
     /**

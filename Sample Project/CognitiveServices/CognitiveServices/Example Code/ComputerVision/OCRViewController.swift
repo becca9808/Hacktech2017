@@ -44,12 +44,10 @@ class OCRViewController:  UIViewController, UIImagePickerControllerDelegate, UIN
         let requestObject: OCRRequestObject = (resource: UIImagePNGRepresentation(selectedImage)!, language: .Automatic, detectOrientation: true)
         try! ocr.recognizeCharactersWithRequestObject(requestObject, completion: { (response) in
             
-            //self.resultTextView.text = response.
+            self.resultTextView.text = response
             
-            /*
             let text = self.ocr.extractStringsFromDictionary(response!)
             self.resultTextView.text = text[4]
-             */
             
         })
         
